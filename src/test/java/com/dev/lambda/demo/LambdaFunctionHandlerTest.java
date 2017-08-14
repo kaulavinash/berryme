@@ -1,24 +1,26 @@
 package com.dev.lambda.demo;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.amazonaws.services.lambda.runtime.Context;
+import com.dev.lambda.demo.model.Input;
 
 /**
  * A simple test harness for locally invoking your Lambda function handler.
  */
 public class LambdaFunctionHandlerTest {
 
-    private static String input;
+    private static Input input;
 
     @BeforeClass
     public static void createInput() throws IOException {
         // TODO: set up your sample input object here.
-        input = "test";
+        input = new Input();
     }
 
     private Context createContext() {
